@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')|first|default('en') }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block meta_title %}{% endblock meta_title %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/lune/app.css') }}">
+        {% endblock stylesheets %}
+    </head>
+
+    <body class="lune-admin {% block body_class %}{% endblock %}">
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>
