@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <defaults public="false" />
+
+        <service id="fneveu_lune.hello_world" class="Fneveu\Bundle\LuneBundle\Service\HelloWorld" />
+        <service id="Fneveu\Bundle\LuneBundle\Service\HelloWorld" alias="fneveu_lune.hello_world" />
+        <service id="fneveu_lune.lune_command" class="Fneveu\Bundle\LuneBundle\Command\LuneCommand">
+            <argument type="service" id="fneveu_lune.hello_world" />
+            <tag name="console.command" />
+        </service>
+        <service id="fneveu_lune.maker.make_crud" class="Fneveu\Bundle\LuneBundle\Maker\MakeCrud">
+            <argument type="service" id="maker.doctrine_helper" />
+            <argument type="service" id="maker.renderer.form_type_renderer" />
+            <tag name="maker.command" />
+        </service>
+    </services>
+</container>
