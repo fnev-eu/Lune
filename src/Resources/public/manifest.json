@@ -1,0 +1,7 @@
+{
+  "bundles/lune/main.css": "/main.css",
+  "bundles/lune/main.js": "/main.js",
+  "bundles/lune/runtime.js": "/runtime.js",
+  "bundles/lune/vendors~main.css": "/vendors~main.css",
+  "bundles/lune/vendors~main.js": "/vendors~main.js"
+}

@@ -1,0 +1,15 @@
+{
+  "entrypoints": {
+    "main": {
+      "js": [
+        "/runtime.js",
+        "/vendors~main.js",
+        "/main.js"
+      ],
+      "css": [
+        "/vendors~main.css",
+        "/main.css"
+      ]
+    }
+  }
+}
